@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-left: 20%; margin-top: 5%;">
+    <ion-row>
+      <ion-col>
+        Judul: {{judulglobal}}
+        <br>
+        Isi: {{isiglobal}}
+        <br>
+        Tanggal: {{tanggalglobal}}
+      </ion-col>
+      <ion-col>
+        <ng-template *ngIf="like; then liked; else like;"></ng-template>
+      <ng-template #liked>
+        <span style="display: none;" id="kode">1</span>
+        <span id="1" (click)=manageLike()>
+        <ion-icon name="heart" ></ion-icon>
+        </span>
+      </ng-template>
+      <ng-template #like>
+        <span style="display: none;" id="kode">2</span>
+        <span id="1" (click)="manageLike()">
+        <ion-icon name="heart-outline" ></ion-icon>
+        </span>
+      </ng-template>
+      </ion-col>
+    </ion-row>
+    
+		<br>
+    
+      <br>
+      <ion-button routerLink="/favoritepage">Show Favorites</ion-button>
+    </div>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor = "let i of indexliked" style="text-align: left; margin-left: 35%;padding-top: 5%;">
+    Judul: {{judulglobal[i]}}<br>
+    Isi: {{isiglobal[i]}}<br>
+    Tanggal: {{tanggalglobal[i]}}<br><br><br>
+</div>
+</ion-content>
